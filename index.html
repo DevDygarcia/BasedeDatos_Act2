@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Datos</title>
+</head>
+<body>
+<h1>Actividad 2</h1>
+<p> By Laura García (DevDygarcia) </p>
+
+<h2>Entidades Importantes para el Modelo de Datos de Biblioteca:</h2>
+<p>Las entidades clave en un modelo de datos de biblioteca suelen ser: Libro, Usuario, Autor, Editorial, Categoría, Préstamo, y Ejemplar.</p>
+<ul>
+<li><strong>Libro:</strong> Representa cada obra individual en la biblioteca.</li>
+<li><strong>Usuario:</strong> Almacena información sobre los miembros de la biblioteca.</li>
+<li><strong>Autor:</strong> Registra los escritores de los libros.</li>
+<li><strong>Editorial:</strong> Contiene detalles sobre las editoriales que publican los libros.</li>
+<li><strong>Categoría:</strong> Clasifica los libros en géneros o temas específicos.</li>
+<li><strong>Préstamo:</strong> Rastrea los préstamos de libros a los usuarios.</li>
+<li><strong>Ejemplar:</strong> Representa copias físicas específicas de un libro.</li>
+</ul>
+
+<h2>Atributos Esenciales para Cada Entidad:</h2>
+<ul>
+<li><strong>Libro:</strong> Título, ISBN, año de publicación, autor(es), editorial, categoría.</li>
+<li><strong>Usuario:</strong> Nombre, dirección, número de teléfono, correo electrónico.</li>
+<li><strong>Autor:</strong> Nombre completo, fecha de nacimiento, nacionalidad.</li>
+<li><strong>Editorial:</strong> Nombre, dirección, sitio web.</li>
+<li><strong>Categoría:</strong> Nombre de la categoría (por ejemplo, “Ficción”, “No ficción”).</li>
+<li><strong>Préstamo:</strong> Fecha de préstamo, fecha de devolución, estado (activo/inactivo).</li>
+<li><strong>Ejemplar:</strong> Número de ejemplar, estado (disponible/prestado).</li>
+</ul>
+
+<h2>Relaciones entre las Entidades:</h2>
+<ul>
+<li>La relación entre Libro y Autor es muchos a muchos (M:N). Un libro puede tener varios autores, y un autor puede escribir varios libros. Esto se representa mediante una tabla intermedia.</li>
+<li>La relación entre Libro y Ejemplar es uno a muchos (1:N). Un libro puede tener múltiples ejemplares, pero cada ejemplar pertenece a un solo libro.</li>
+</ul>
+
+<h2>Restricciones de Integridad:</h2>
+<ul>
+<li><strong>Clave Primaria:</strong> Cada entidad debe tener una clave primaria única (por ejemplo, el ISBN para los libros).</li>
+<li><strong>Clave Externa:</strong> Las relaciones deben basarse en claves externas (por ejemplo, el ID del autor en la tabla de libros).</li>
+<li><strong>Reglas de Eliminación:</strong> Definir cómo se manejarán las eliminaciones (por ejemplo, si se elimina un autor, ¿qué sucede con sus libros?).</li>
+</ul>
+
+<h2>Optimización de Rendimiento y Escalabilidad:</h2>
+<ul>
+<li><strong>Índices:</strong> Crear índices en atributos comunes para acelerar las búsquedas.</li>
+<li><strong>Particionamiento:</strong> Dividir la base de datos en particiones para mejorar la eficiencia.</li>
+<li><strong>Caché:</strong> Utilizar caché para datos frecuentemente accedidos.</li>
+</ul>
+
+<h2>Consultas y Análisis:</h2>
+<p>En este modelo, podríamos consultar:</p>
+<ul>
+<li>Todos los libros prestados por un usuario específico.</li>
+<li>Los libros más populares por categoría.</li>
+<li>Historial de préstamos de un libro en particular.</li>
+</ul>
+
+<h2>Mejoras Potenciales::</h2>
+<ul>
+<li>Considerar una entidad para Reseñas o Calificaciones de libros.</li>
+<li>Explorar relaciones más complejas, como autores que colaboran en un libro.</li>
+</ul>
+</body>
+</html>
